@@ -1,0 +1,570 @@
+/* ======== BASE STYLES ======== */
+body {
+  font-family: 'Liberation Sans', sans-serif;
+  background-color: #ffffff;
+  color: #101617;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  height: 60px;
+  overflow: visible;
+}
+
+.navbar a {
+  color: #101617 !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #06959d !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 50px;
+}
+
+.logo-img {
+  height: 50px;
+  max-height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  .logo-img {
+    height: 45px;
+  }
+}
+
+.nav-link.active {
+  color: #06959d !important;
+  border-bottom: 2px solid #06959d;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #ffffff; /* white or another light color */
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: #101617 !important; /* dark text */
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+  }
+}
+
+
+/* ======== HERO SECTION ======== */
+.hero {
+  background: url('../images/creationofadamHD.png') center/cover no-repeat;
+  color: #ffffff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* ======== SECTIONS ======== */
+.section {
+  padding: 120px 20px;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+/* ======== BUTTONS ======== */
+.btn-primary {
+  background-color: #06959d;
+  color: #ffffff;
+  border: 1px solid #000000; /* Small black border */
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5fb3b8;
+  border: 1px solid #5fb3b8;  /* Blend with background */
+  color: #ffffff;
+}
+
+
+.btn-outline-dark {
+  border: 2px solid #101617;
+  color: #101617;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+  background-color: #101617;
+  color: #ffffff;
+}
+
+.btn-brand {
+  background-color: #06959d; /* Match brand color */
+  color: #ffffff;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  background-color: #06959d;
+  transform: translateY(-2px);
+}
+
+
+/* ======== FORM STYLES ======== */
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #06959d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(6, 149, 157, 0.2);
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background-color: #101617;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #ffffff;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ======== RESPONSIVE ======== */
+#hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  text-align: center;
+  background: url('../images/creationofadamHD.png') center/cover no-repeat;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary,
+  .btn-outline-dark {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+    #hero-section {
+    padding: 80px 15px;
+    background-position: center top;
+  }
+
+  #hero-section h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  #hero-section p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #hero-section .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+.video-section video {
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Ensure consistent vertical spacing across homepage sections */
+.section {
+  padding: 100px 20px;
+  min-height: 200px;
+}
+
+.section.bg-dark,
+.section.bg-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.gradient-scroll {
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Styling for square images with smaller size */
+.square-image {
+  width: 80%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+/* Video Background Styling for Intro */
+.intro-title {
+  position: relative;
+  color: #ffffff;
+  padding: 120px 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.intro-title .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(50%);
+}
+
+.intro-title .container {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.intro-title p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+body.privacy-page, body.terms-page {
+  background: linear-gradient(to bottom, #ffffff, #06959d);
+}
+
+
+body.about-page {
+  background: linear-gradient(to bottom, #ffffff, #06959d);
+  transition: background 0.5s ease;  /* smooth transition for the gradient change */
+}
+
+/* Ensure your content sections (blocks) are unaffected by the gradient */
+.section {
+  position: relative;
+  z-index: 2;  /* Keep sections on top of the gradient */
+  padding: 100px 20px;
+  min-height: 200px;
+}
+
+.intro-text {
+  position: relative;
+  z-index: 3;
+}
+
+/* Styling for Terms & Conditions Page with Left Alignment */
+.terms-content {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.terms-content h2 {
+  font-size: 1.8rem;
+  color: #06959d;
+  margin-top: 30px;
+  margin-bottom: 10px; /* Space between subheading and text */
+}
+
+.terms-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-left: 0; /* Align text to the left */
+  padding-left: 0; /* No padding */
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+h1.mb-4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #101617;
+  margin-bottom: 30px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Styling for Privacy Policy Page with Left Alignment */
+.privacy-content {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.privacy-content h2 {
+  font-size: 1.8rem;
+  color: #06959d;
+  margin-top: 30px;
+  margin-bottom: 10px; /* Space between subheading and text */
+}
+
+.privacy-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-left: 0; /* Align text to the left */
+  padding-left: 0; /* No padding */
+  margin-bottom: 20px; /* Adds spacing between paragraphs */
+}
+
+h1.mb-4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #101617;
+  margin-bottom: 30px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+#intro-video-section {
+  height: 100vh;
+  overflow: hidden;
+}
+#intro-video-section video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.fade-in {
+  animation: fadeInHero 1s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOutVideo 1s ease-out forwards;
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutVideo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ======= AI Service Backgrounds ======= */
+.hero-services {
+  background: linear-gradient(to bottom, #06959d, #012f31); /* Brand gradient */
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero-services h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-services p {
+  font-size: 1.25rem;
+  max-width: 720px;
+  margin: 20px auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-services .btn {
+  margin-top: 20px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ======= AI Service Backgrounds ======= */
+.bg-ai-automation,
+.bg-ai-custom,
+.bg-ai-strategy,
+.bg-ai-kits,
+.bg-ai-support {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background image paths */
+.bg-ai-automation {
+  background-image: url('../images/bg-automation.png');
+}
+
+.bg-ai-custom {
+  background-image: url('../images/bg-custom.png');
+}
+
+.bg-ai-strategy {
+  background-image: url('../images/bg-strategy.png');
+}
+
+.bg-ai-kits {
+  background-image: url('../images/bg-kits.png');
+}
+
+.bg-ai-support {
+  background-image: url('../images/bg-support.png');
+}
+
+/* Overlay for image background sections */
+.bg-ai-automation::before,
+.bg-ai-custom::before,
+.bg-ai-strategy::before,
+.bg-ai-kits::before,
+.bg-ai-support::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+  z-index: 0;
+}
+
+/* Content positioning above overlays */
+.bg-ai-automation .content,
+.bg-ai-custom .content,
+.bg-ai-strategy .content,
+.bg-ai-kits .content,
+.bg-ai-support .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Neutral background sections */
+.bg-neutral {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  color: #101617;
+  position: relative;
+}
+
+.bg-neutral h2,
+.bg-neutral p,
+.bg-neutral li {
+  color: #101617;
+  text-shadow: none;
+}
+
+.bg-gradient-neutral {
+  background: linear-gradient(to bottom, #ffffff, #ddf8f8, #9ae4eb); /* soft transition */
+}
+
+/* Removed unused scroll-gradient-overlay */
+
