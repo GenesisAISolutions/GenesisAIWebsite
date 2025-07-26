@@ -112,15 +112,17 @@
         <h5 class="modal-title mb-3" id="downloadModalLabel">Sign Up to Get the Toolkit</h5>
         <!-- HubSpot Form Embed -->
         <div id="hubspot-form"></div>
-        <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            region: "na2",
-            portalId: "243251848",
-            formId: "777c7a68-838d-42d1-b4e8-4acbd73bef3d",
-            target: "#hubspot-form"
-          });
-        </script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              // Wait for HubSpot form to load
+              window.addEventListener('message', function(event) {
+                if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+                  // Open your thank-you page in a new tab
+                  window.open('https://genesissolutions.ai/thank-you.html', '_blank');
+                }
+              });
+            });
+          </script>
       </div>
     </div>
   </div>

@@ -7,71 +7,93 @@
   <title>Thank You | Genesis AI Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/liberation-sans" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Page-specific styles */
-    .hero { background: #0b1c3d; color: #fff; padding: 80px 20px; text-align: center; }
-    .hero h1 { font-size: 2.4rem; font-weight: bold; }
-    .hero p { color: #dcdcdc; margin: 15px 0; }
-    .hero .btn { padding: 12px 30px; font-size: 1.1rem; border-radius: 8px; }
+    body { font-family: 'Liberation Sans', sans-serif; margin:0; padding:0; }
+    /* HERO STYLES */
+    .hero { 
+      background: url('images/thankyou-bg.jpg') no-repeat center center/cover; 
+      color: #fff; 
+      padding: 140px 20px; 
+      text-align: center;
+      min-height: 80vh; 
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 150, 136, 0.6); /* Teal overlay */
+    }
+    .hero .container { position: relative; z-index: 2; }
+    .hero img { max-width: 180px; margin-bottom: 20px; }
+    .hero h1 { font-size: 3rem; font-weight: bold; margin-bottom: 20px; }
+    .hero p { font-size: 1.3rem; color: #e8f5f3; margin-bottom: 30px; }
+    .hero .btn { 
+      padding: 14px 36px; 
+      font-size: 1.2rem; 
+      border-radius: 8px; 
+      background-color: #4DB6AC; 
+      border: none;
+    }
+    .hero .btn:hover { background-color: #26A69A; }
 
-    .highlight { padding: 60px 20px; background: #f0f2f5; text-align: center; }
-    .highlight h3 { font-size: 1.8rem; margin-bottom: 15px; }
-    .highlight p { max-width: 700px; margin: 0 auto 20px; }
-
+    /* RECOMMENDED SECTION */
     .recommended { padding: 60px 20px; background: #fff; }
-    .recommended h2 { text-align: center; margin-bottom: 40px; }
-    .rec-card { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; text-align: center; }
+    .recommended h2 { text-align: center; margin-bottom: 40px; color: #0b1c3d; }
+    .rec-card { 
+      background: #f8f9fa; 
+      border: 1px solid #e0e0e0; 
+      border-radius: 8px; 
+      padding: 25px; 
+      text-align: center; 
+      transition: transform 0.2s ease;
+    }
+    .rec-card:hover { transform: translateY(-4px); }
     .rec-card i { font-size: 2.5rem; color: #0b1c3d; margin-bottom: 15px; }
-    .rec-card h4 { margin-top: 10px; font-weight: 600; }
-    .rec-card p { color: #555; font-size: 0.95rem; }
+    .rec-card h4 { margin-top: 10px; font-weight: 600; color: #0b1c3d; }
+    .rec-card p { color: #333; font-size: 0.95rem; }
+    .rec-card .btn-outline-primary { 
+      color: #0b1c3d; 
+      border-color: #0b1c3d; 
+    }
+    .rec-card .btn-outline-primary:hover { 
+      background-color: #0b1c3d; 
+      color: #fff; 
+    }
 
-    .cta-bar { background: #0b1c3d; color: #fff; text-align: center; padding: 50px 20px; }
+    /* FINAL CTA SECTION */
+    .cta-bar { 
+      background: #0b1c3d; 
+      color: #fff; 
+      text-align: center; 
+      padding: 50px 20px; 
+    }
     .cta-bar h2 { margin-bottom: 20px; }
-    .cta-bar .btn { font-size: 1.2rem; padding: 12px 32px; border-radius: 8px; }
+    .cta-bar .btn { 
+      font-size: 1.2rem; 
+      padding: 12px 32px; 
+      border-radius: 8px; 
+      background-color: #4DB6AC; 
+      border: none;
+    }
+    .cta-bar .btn:hover { background-color: #26A69A; }
   </style>
 </head>
 
 <body class="thankyou-page">
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand position-relative" href="index.html">
-        <img src="images/logo.png" alt="Genesis AI Logo" class="logo-img">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero d-flex align-items-center">
     <div class="container">
-      <h1>Thank you for downloading!</h1>
-      <p>Bookmark this page so you can access your AI Toolkit at any time.</p>
-      <a href="downloads/Genesis_AI_Solutions_Toolkit_v1_072425.pdf" class="btn btn-primary" target="_blank">Download Now</a>
-    </div>
-  </section>
-
-  <!-- HIGHLIGHT RESOURCE -->
-  <section class="highlight">
-    <div class="container">
-      <h3>Get a Free AI Consultation</h3>
-      <p>Want to learn how AI can revolutionize your workflows? Book a 30‑minute session with our team and get tailored recommendations for your business.</p>
-      <a href="contact.html" class="btn btn-danger">Book Free Consultation</a>
+      <img src="images/logo.png" alt="Genesis AI Logo">
+      <h1>Thank You for Downloading!</h1>
+      <p>Your AI journey starts now — explore your toolkit and discover how Genesis AI can help you innovate.</p>
+      <a href="downloads/Genesis_AI_Solutions_Toolkit_v1_072425.pdf" class="btn btn-primary" target="_blank">
+        Access Your Toolkit
+      </a>
     </div>
   </section>
 
@@ -116,10 +138,12 @@
     </div>
   </section>
 
-  <!-- CTA BAR -->
+  <!-- FINAL CTA -->
   <section class="cta-bar">
-    <h2>Need help getting started with AI?</h2>
-    <a href="contact.html" class="btn btn-light">Contact Us</a>
+    <div class="container">
+      <h2>Start Your AI Journey Today</h2>
+      <a href="contact.html" class="btn btn-light">Contact Us</a>
+    </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
