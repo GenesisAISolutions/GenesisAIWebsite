@@ -11,25 +11,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Page-specific styles */
-    .hero { background: #0b1c3d; color: #fff; padding: 80px 20px; text-align: center; }
+    .hero { 
+      background: #0b1c3d; /* Dark navy blue */
+      color: #fff; 
+      padding: 80px 20px; 
+      text-align: center; 
+      position: relative;
+    }
+
+    /* Kill any overlays from style.css */
+    .hero::before {
+      content: none !important;
+      background: none !important;
+    }
+
+
     .hero h1 { font-size: 2.8rem; font-weight: bold; }
-    .hero p { color: #dcdcdc; margin: 15px auto; max-width: 700px; }
+    .hero p { color: #e0e0e0; margin: 15px auto; max-width: 700px; }
     .hero .btn { padding: 12px 30px; font-size: 1.1rem; border-radius: 8px; }
 
     .features { padding: 60px 20px; background: #f8f9fa; }
     .feature-box { text-align: center; padding: 20px; }
-    .feature-box i { font-size: 2.5rem; color: #0b1c3d; margin-bottom: 15px; }
+    .feature-box i { font-size: 2.5rem; color: #008080; margin-bottom: 15px; }
     .feature-box h3 { margin-bottom: 10px; }
 
     .highlight { padding: 60px 20px; background: #fff; text-align: center; }
     .highlight h2 { font-size: 2rem; margin-bottom: 15px; }
     .highlight p { max-width: 700px; margin: 0 auto 20px; }
 
-    .cta-bar { background: #0b1c3d; color: #fff; text-align: center; padding: 50px 20px; }
+    .cta-bar { background: #008080; color: #fff; text-align: center; padding: 50px 20px; }
     .cta-bar h2 { margin-bottom: 20px; }
     .cta-bar .btn { font-size: 1.2rem; padding: 12px 32px; border-radius: 8px; }
   </style>
 </head>
+
 
 <body class="resources-page">
 
@@ -105,24 +120,31 @@
   </form>
 </section>
 
-  <!-- MODAL FORM -->
+<!-- MODAL FORM -->
   <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-4">
         <h5 class="modal-title mb-3" id="downloadModalLabel">Sign Up to Get the Toolkit</h5>
         <!-- HubSpot Form Embed -->
         <div id="hubspot-form"></div>
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              // Wait for HubSpot form to load
-              window.addEventListener('message', function(event) {
-                if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-                  // Open your thank-you page in a new tab
-                  window.open('https://genesissolutions.ai/thank-you.html', '_blank');
-                }
-              });
+        <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "243251848",
+            formId: "777c7a68-838d-42d1-b4e8-4acbd73bef3d",
+            region: "na2",
+            target: "#hubspot-form"
+          });
+
+          // Redirect thank-you in new tab
+          document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('message', function(event) {
+              if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+                window.open('https://genesissolutions.ai/thank-you.html', '_blank');
+              }
             });
-          </script>
+          });
+        </script>
       </div>
     </div>
   </div>

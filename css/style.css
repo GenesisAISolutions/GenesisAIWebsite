@@ -91,39 +91,6 @@ a {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
-<style>
-  .hero { 
-    background: url('images/thankyou-bg.jpg') no-repeat center center/cover; 
-    color: #fff; 
-    padding: 120px 20px; 
-    text-align: center;
-    min-height: 80vh; /* Taller hero for prominence */
-    position: relative;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* Dark overlay for text readability */
-  }
-  .hero .container {
-    position: relative;
-    z-index: 2;
-  }
-  .hero h1 { font-size: 3rem; font-weight: bold; margin-bottom: 20px; }
-  .hero p { font-size: 1.3rem; color: #e8f5f3; margin-bottom: 30px; }
-  .hero .btn { 
-    padding: 14px 36px; 
-    font-size: 1.2rem; 
-    border-radius: 8px; 
-    background-color: #4DB6AC; 
-    border: none;
-  }
-  .hero .btn:hover { background-color: #26A69A; }
-</style>
-
-
 /* ======== SECTIONS ======== */
 .section {
   padding: 120px 20px;
