@@ -1,105 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genesis AI Solutions | AI Made Practical for Small Business</title>
-  <meta name="description" content="Genesis AI Solutions helps businesses unlock the power of AI automation. Streamline workflows, boost productivity, and gain a competitive edge—with tailored AI services for SMBs.">
-
-  <!-- Bootstrap & Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/liberation-sans" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRXSYQ5BLP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KRXSYQ5BLP');
-</script>
-
-  <!-- Apollo Tracking Script -->
-  <script>
-    function initApollo(){
-      var n=Math.random().toString(36).substring(7),
-          o=document.createElement("script");
-      o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;
-      o.async=!0;
-      o.defer=!0;
-      o.onload=function(){
-          window.trackingFunctions.onLoad({appId:"686c2faf9a77780011415141"});
-      };
-      document.head.appendChild(o);
-    }
-    initApollo();
-</script>
-
-<!-- Structured Data for Logo -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Genesis AI Solutions",
-  "url": "https://genesissolutions.ai/services.html",
-  "logo": "https://genesissolutions.ai/images/logo.png",
-  "image": "https://genesissolutions.ai/images/logo.png",
-  "description": "Genesis AI Solutions provides AI-powered automation and consulting services to help businesses streamline operations and boost growth.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Virginia",
-    "addressCountry": "US"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Support",
-    "email": "info@genesissolutions.ai"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/genesis-ai-solutions-llc"
-  ]
-}
-</script>
-
-</head>
-
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand position-relative" href="index.html">
-        <img src="images/logo.png" alt="Genesis AI Logo" class="logo-img">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+---
+layout: default
+title: "Home"
+description: "AI Made Practical for Small Business"
+active: home
+---
 
 <!-- Intro Video Section -->
 <section id="intro-video-section" class="position-relative">
-  <video id="introVideo" class="w-100" autoplay muted playsinline>
-    <source src="images/genesisintro.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <video id="introVideo" class="w-100" autoplay muted playsinline>
+      <source src="{{ '/assets/videos/genesisintro.mp4' | relative_url }}" type="video/mp4">
+    </video>
 </section>
 
-<!-- Hero Section Hidden by Default -->
+<!-- Hero Section -->
 <section id="hero-section" class="hero text-white text-center d-none">
   <div class="container py-5">
     <h1 class="display-4">Welcome to the Era of AI</h1>
@@ -110,44 +23,18 @@
   </div>
 </section>
 
-  <section class="section bg-dark text-white text-center">
-    <div class="container">
-      <h2 class="mb-4">Solutions that drive progress</h2>
-      <p>At Genesis AI Solutions, we turn AI complexity into business clarity. From automation to insights, we build tools that work for your goals — not just your tech stack.</p>
-      <a href="about.html" class="btn btn-brand mt-3">Explore Our Insights</a>
-    </div>
-  </section>
+<section class="section bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="mb-4">Solutions that drive progress</h2>
+    <p>At Genesis AI Solutions, we turn AI complexity into business clarity. From automation to insights, we build tools that work for your goals — not just your tech stack.</p>
+    <a href="about.html" class="btn btn-brand mt-3">Explore Our Insights</a>
+  </div>
+</section>
 
-  <section class="section bg-light text-center">
-    <div class="container">
-      <h2 class="mb-4">Start Your AI Journey Now</h2>
-      <p>Book a free consultation and let’s uncover how AI can serve your mission — starting today.</p>
-      <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
-    </div>
-  </section>
-
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 Genesis AI Solutions. All rights reserved.</p>
-
-      <div class="mb-3">
-        <a href="terms.html" class="text-white me-3">Terms & Conditions</a>
-        <a href="privacy.html" class="text-white">Privacy Policy</a>
-      </div>
-
-      <div>
-        <a href="https://www.linkedin.com/company/genesis-ai-solutions-llc/" target="_blank" class="me-3">
-          <img src="images/linkedin-brands.svg" alt="LinkedIn" width="24" height="24">
-        </a>
-        <a href="mailto:info@genesissolutions.ai">
-          <img src="images/envelope-solid.svg" alt="Email" width="24" height="24">
-        </a>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-</body>
-</html>
+<section class="section bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4">Start Your AI Journey Now</h2>
+    <p>Book a free consultation and let’s uncover how AI can serve your mission — starting today.</p>
+    <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+  </div>
+</section>

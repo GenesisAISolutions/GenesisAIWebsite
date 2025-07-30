@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="py-5">
+  <div class="container">
+    <h1 class="article-title">{{ page.title }}</h1>
+    <p class="article-date">{{ page.date | date: "%B %d, %Y" }}</p>
+    <div class="text-center">
+      <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="img-fluid mb-4">
+    </div>
+  </div>
+</section>
+
+<!-- Narrow-centered Article Body -->
+<section class="article-content dark-mode">
+  <div class="container narrow-article">
+    {{ content }}
+    <div class="mt-5 text-center">
+      <a href="/resources/articles/" class="btn btn-outline-light">← Back to Articles</a>
+    </div>
+  </div>
+</section>

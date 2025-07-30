@@ -1,0 +1,14 @@
+title: Genesis AI Solutions
+description: AI Made Practical for Small Business
+url: "https://genesissolutions.ai"
+baseurl: ""
+
+markdown: kramdown
+
+collections:
+  resources:
+    output: true
+    permalink: /resources/articles/:title/
+
+include:
+  - images/genesisintro.mp4

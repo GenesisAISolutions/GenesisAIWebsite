@@ -1,0 +1,91 @@
+---
+title: "Free AI Toolkit | Genesis AI Solutions"
+description: "Download our Free AI Toolkit — actionable workflows, top AI tools, and implementation guides to help your business integrate AI fast."
+layout: default
+relative_path: "../"
+active: resources
+body_class: free-toolkit-page
+---
+
+<!-- HERO -->
+<header class="hero-services">
+  <div class="container">
+    <h1 class="display-4">Get Your Free AI Toolkit</h1>
+    <p class="lead">Unlock actionable AI workflows, top tool recommendations, and implementation guides.</p>
+    <p>
+      Our toolkit provides practical steps and curated AI resources to help your business integrate AI quickly and effectively.
+      Whether you’re just starting or looking to scale, this toolkit is designed for you.
+    </p>
+    <button class="btn btn-primary btn-lg shadow" data-bs-toggle="modal" data-bs-target="#downloadModal">
+      Download Now
+    </button>
+  </div>
+</header>
+
+<!-- FEATURES -->
+<section style="background: #06959d; color: #fff; padding: 150px 0;">
+  <div class="container-fluid px-5" style="max-width: 1400px;">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100 text-center text-dark">
+            <i class="fa-solid fa-diagram-project fa-3x mb-3" style="color:#06959d;"></i>
+            <h3 class="h5 fw-bold mb-2">Step-by-Step Framework</h3>
+            <p>Practical strategies for integrating AI into your daily operations with confidence.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100 text-center text-dark">
+            <i class="fa-solid fa-user-graduate fa-3x mb-3" style="color:#06959d;"></i>
+            <h3 class="h5 fw-bold mb-2">Expert Insights</h3>
+            <p>Proven methods and tips curated by AI consultants to maximize your success.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100 text-center text-dark">
+            <i class="fa-solid fa-gears fa-3x mb-3" style="color:#06959d;"></i>
+            <h3 class="h5 fw-bold mb-2">Top Tools & Workflows</h3>
+            <p>A curated list of resources to save time, cut costs, and improve efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- SECONDARY CTA -->
+<section class="highlight py-5 text-center" style="background: #EFF1F3;">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Need Help Implementing AI?</h2>
+    <p class="mb-4 mx-auto" style="max-width: 800px; font-size: 1.15rem;">
+      Our team can help you design and deploy AI-driven strategies tailored to your business goals. 
+      Book a free consultation and start transforming your operations today.
+    </p>
+    <a href="{{ page.relative_path }}contact.html" class="btn btn-lg text-white shadow" style="background:#DF204D; padding:14px 36px; border-radius:8px;">Book Free Consultation</a>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="modal-title mb-3" id="downloadModalLabel">Sign Up to Get the Toolkit</h5>
+      <div id="hubspot-form"></div>
+      <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          portalId: "243251848",
+          formId: "777c7a68-838d-42d1-b4e8-4acbd73bef3d",
+          region: "na2",
+          target: "#hubspot-form"
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          window.addEventListener('message', function(event) {
+            if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+              window.open('{{ page.relative_path }}thank-you.html', '_blank');
+            }
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>

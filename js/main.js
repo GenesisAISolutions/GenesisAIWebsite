@@ -45,3 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const resourcesLink = document.querySelector('#resourcesDropdown');
+  if (resourcesLink) {
+    resourcesLink.addEventListener('click', function (e) {
+      // Only redirect if the dropdown isn't currently open
+      if (!this.parentElement.classList.contains('show')) {
+        e.preventDefault();
+        window.location.href = this.getAttribute('href');
+      }
+    });
+  }
+});
